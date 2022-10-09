@@ -2,17 +2,17 @@ import { Component } from 'react';
 
 export class Modal extends Component {
   componentDidMount() {
-    document.addEventListener('keydown', this.onESCclick);
+    document.addEventListener('keydown', this.onEscClick);
   }
 
-  onESCclick = e => {
+  onEscClick = e => {
     if (e.key === 'Escape') {
       this.props.toggleModal();
     }
   };
 
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.onESCclick);
+    document.removeEventListener('keydown', this.onEscClick);
   }
 
   render() {
